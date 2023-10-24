@@ -5,16 +5,16 @@ class World {
   Space entry;
   
   World () {
-    Space entry    = new Space("Entry");
-    Space northern_watersource = new Space("Northern Watersource");
-    Space fine_filter = new Space("Fine filtering");
-    Space western_watersource = new Space("Western Watersource");
-    Space Shop     = new Space("Shop");
-    Space northeastern_watersource = new Space("North-Eastern Watersource");
-    Space water_reservoir = new Space("Water Reservoir");
-    Space active_coal_filter = new Space("Active Coal Filter");
-    Space northwestern_watersource = new Space("North-Western Watersource");
-    Space rough_filter = new Space("Rough filter");
+    Space entry    = new Space("Entry","there isn't much to see here");
+    Space northern_watersource = new Space("Northern Watersource", "here you can collect water");
+    Space fine_filter = new Space("Fine filtering", "here you can filter water using the fine filter");
+    Space western_watersource = new Space("Western Watersource", "here you can collect water");
+    Space Shop     = new Space("Shop", "here you can purchase new tools");
+    Space northeastern_watersource = new Space("North-Eastern Watersource", "here you can collect water");
+    Space water_reservoir = new Space("Water Reservoir", "here you can store clean water");
+    Space active_coal_filter = new Space("Active Coal Filter", "here you can filter water using the active coal filter");
+    Space northwestern_watersource = new Space("North-Western Watersource", "here you can collect water");
+    Space rough_filter = new Space("Rough filter", "here you can filter water using the rough filter");
     
     entry.addEdge("north", northern_watersource);
     entry.addEdge("south", fine_filter);

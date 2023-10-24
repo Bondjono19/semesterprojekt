@@ -6,15 +6,21 @@ import java.util.Map;
 
 class Node {
   String name;
+  String description;
   Map<String, Node> edges = new HashMap<String, Node>();
   
-  Node (String name) {
+  Node (String name, String description) {
     this.name = name;
+    this.description = description;
   }
+  
   
   public String getName () {
     return name;
   }
+
+  public String getDescription () {
+    return description;}
   
   public void addEdge (String name, Node node) {
     edges.put(name, node);
