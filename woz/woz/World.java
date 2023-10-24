@@ -15,7 +15,7 @@ class World {
     Space active_coal_filter = new Space("Active Coal Filter");
     Space northwestern_watersource = new Space("North-Western Watersource");
     Space western_watersource = new Space("Western Watersource");
-    Space rough_ftiler = new Space("Rough filter");
+    Space rough_filter = new Space("Rough filter");
     
     entry.addEdge("north", northern_watersource);
     entry.addEdge("south", fine_filter);
