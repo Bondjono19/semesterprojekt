@@ -4,32 +4,33 @@
 import java.util.Set;
 
 class Space extends Node {
-  private int waterAmount;
 
   Space (String name, String description) {
     super(name, description);
-    waterAmount = 0;
+  }
+  Space (String name, String description, int water){
+    super(name,description,water);
   }
 
   public int getWaterAmount() {
-    return waterAmount;
+    return water;
   }
   
-  public void fillWater(int amount){
-    waterAmount += amount;
-  }
 
   public void drainWater(int amount){
-    if (waterAmount >= amount){
-      waterAmount -= amount;
-    }
-    else {
-      System.out.println("there isn't enough water in the source");
+    if(water>0){
+      water--;
+      System.out.println("Water collected successfully - " + water + " liters left.");
+    }else{
+      System.out.println("No water here");
     }
 
   }
   public void welcome () {
     System.out.println("You are now at " + name + " " + description);
+    if(water>0){
+      System.out.println("Liters of water to collect: " + water);
+    }
     Set<String> exits = edges.keySet();
     System.out.println("Current exits are:");
     for (String exit: exits) {

@@ -12,6 +12,7 @@ class Game {
   
   private static void initRegistry () {
     Command cmdExit = new CommandExit();
+    registry.register("collect", new CommandCollect());
     registry.register("exit", cmdExit);
     registry.register("quit", cmdExit);
     registry.register("bye", cmdExit);
@@ -30,6 +31,6 @@ class Game {
       String line = scanner.nextLine();
       registry.dispatch(line);
     }
-    System.out.println("Game Over 😥");
+    System.out.println("Game Over");
   }
 }

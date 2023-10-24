@@ -6,14 +6,14 @@ class World {
   
   World () {
     Space entry    = new Space("Entry","there isn't much to see here");
-    Space northern_watersource = new Space("Northern Watersource", "here you can collect water");
+    Space northern_watersource = new Space("Northern Watersource", "here you can collect water", 100);
     Space fine_filter = new Space("Fine filtering", "here you can filter water using the fine filter");
-    Space western_watersource = new Space("Western Watersource", "here you can collect water");
+    Space western_watersource = new Space("Western Watersource", "here you can collect water", 100);
     Space Shop     = new Space("Shop", "here you can purchase new tools");
-    Space northeastern_watersource = new Space("North-Eastern Watersource", "here you can collect water");
+    Space northeastern_watersource = new Space("North-Eastern Watersource", "here you can collect water", 100);
     Space water_reservoir = new Space("Water Reservoir", "here you can store clean water");
     Space active_coal_filter = new Space("Active Coal Filter", "here you can filter water using the active coal filter");
-    Space northwestern_watersource = new Space("North-Western Watersource", "here you can collect water");
+    Space northwestern_watersource = new Space("North-Western Watersource", "here you can collect water", 100);
     Space rough_filter = new Space("Rough filter", "here you can filter water using the rough filter");
     
     entry.addEdge("north", northern_watersource);
@@ -50,14 +50,6 @@ class World {
 
     active_coal_filter.addEdge("west", fine_filter);
     active_coal_filter.addEdge("north", Shop);
-
-    
-    northeastern_watersource.fillWater(100);
-    northeastern_watersource.fillWater(100);
-    northwestern_watersource.fillWater(100);
-    western_watersource.fillWater(100);
-    
-    
     
     
     this.entry = entry;

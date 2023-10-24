@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 class Node {
+  int water;
   String name;
   String description;
   Map<String, Node> edges = new HashMap<String, Node>();
@@ -13,7 +14,11 @@ class Node {
     this.name = name;
     this.description = description;
   }
-  
+  Node (String name, String description, int water){
+    this.name = name;
+    this.description = description;
+    this.water = water;
+  }
   
   public String getName () {
     return name;
