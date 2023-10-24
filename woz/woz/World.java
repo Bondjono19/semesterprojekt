@@ -50,6 +50,14 @@ class World {
 
     active_coal_filter.addEdge("west", fine_filter);
     active_coal_filter.addEdge("north", Shop);
+
+    
+    northeastern_watersource.fillWater(100);
+    northeastern_watersource.fillWater(100);
+    northwestern_watersource.fillWater(100);
+    western_watersource.fillWater(100);
+    
+    
     
     
     this.entry = entry;
