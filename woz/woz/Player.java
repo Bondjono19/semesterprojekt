@@ -20,12 +20,18 @@ public class Player {
         return points;
     }
 
-    //Setter (Updating points)
+    //Setter (Updating points and name)
     public void setPoints(int NewPoint){
         points=NewPoint;
     }
+    public void setName(String name){
+        this.name=name;
+    }
 
     //Methods for drop() and pickup()
+    public void pickUp(String item);{
+    }
+
 
 
 

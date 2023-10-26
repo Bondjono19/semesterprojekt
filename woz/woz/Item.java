@@ -1,14 +1,27 @@
 public abstract class Item {
-    private String name;
-    public Item(String name){
-        this.name=name;
+    private String itemName;
+    private String itemDescription;
+
+    public Item(String itemName, String itemDescription){ //Contructor
+        this.itemName=itemName;
+        this.itemDescription=itemDescription;
     }
 
-    public String getName(){
-        return name;
+    //Getter
+    public String getItemName(){
+        return itemName;
     }
-    public void setName(String newName){
-        name=newName;
+    public String getItemDescription(){
+        return itemDescription;
+    }
+
+    //Setter
+    public void setItemName(String newItemName){
+        itemName=newItemName;
+    }
+
+    public void setItemDescription(String newItemDescription){
+        itemDescription=newItemDescription;
     }
 
 
