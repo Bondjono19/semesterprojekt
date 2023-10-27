@@ -29,14 +29,9 @@ public class Player {
     }
 
     //Methods for drop() and pickup()
+
     public void pickUp(String item);{
 
     }
-
-
-
-
-
-
 
 }
