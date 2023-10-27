@@ -6,11 +6,15 @@ import java.util.ArrayList;
 
 public class Inventory {
 
+
     //-Make ArrayList of items
     private ArrayList<Item> itemArrayList= new ArrayList(); //ONLY HAS ACCESS TO ITEM'S METHODS
 
-    Inventory(ArrayList<Item> itemArrayList){
+    /*Inventory(ArrayList<Item> itemArrayList){
         this.itemArrayList=itemArrayList;
+    }*/
+    public ArrayList<Item> displayInventory(){ //Getter method
+        return itemArrayList;
     }
 
 
@@ -26,8 +30,9 @@ public class Inventory {
     public void removeItem(Item item){
     if(itemArrayList!=null){
         itemArrayList.remove(item);} //NO GOOD (I think):)
+    }
 
-}
+
 
 
 
