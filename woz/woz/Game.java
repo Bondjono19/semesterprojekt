@@ -5,11 +5,12 @@ import java.util.Scanner;
 
 class Game {
   static World    world    = new World();
-  static Context  context  = new Context(world.getEntry());
   static Command  fallback = new CommandUnknown();
-  static Registry registry = new Registry(context, fallback);
   static Scanner  scanner  = new Scanner(System.in);
-  
+  static Player player     = new Player(0,"navn");
+  static Context  context  = new Context(world.getEntry(),player);
+  static Registry registry = new Registry(context, fallback);
+
   private static void initRegistry () {
     Command cmdExit = new CommandExit();
     registry.register("collect", new CommandCollect());
@@ -28,6 +29,7 @@ class Game {
     
     while (context.isDone()==false) {
       System.out.print("> ");
+      System.out.println("your water: "+player.getWater());
       String line = scanner.nextLine();
       registry.dispatch(line);
     }

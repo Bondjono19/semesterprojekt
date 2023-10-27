@@ -4,11 +4,17 @@
 class Context {
   Space current;
   boolean done = false;
-  
-  Context (Space node) {
+  Player player;
+
+  Context (Space node,Player playerIn) {
     current = node;
+    player = playerIn;
   }
   
+  public Player getPlayer(){
+    return player;
+  }
+
   public Space getCurrent() {
     return current;
   }
