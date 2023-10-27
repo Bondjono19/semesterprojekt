@@ -1,24 +1,32 @@
 /*This class contains the items that Player picks up,
 * or to REMOVE them*/
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.ArrayList;
 
 public class Inventory {
 
-
     //-Make ArrayList of items
-    ArrayList<Item> itemArrayList= new ArrayList(); //ONLY HAS ACCESS TO ITEM'S METHODS
+    private ArrayList<Item> itemArrayList= new ArrayList(); //ONLY HAS ACCESS TO ITEM'S METHODS
+
+    Inventory(ArrayList<Item> itemArrayList){
+        this.itemArrayList=itemArrayList;
+    }
 
 
     // addItem method
     public void addItem(Item item){
+        if(itemArrayList.size()<=3){         //If the inventory size is under 3 you can add an item.
+            itemArrayList.add(item);}
 
     }
 
 
-
     // removeItem method
     public void removeItem(Item item){
-    itemArrayList.remove(item); //NO GOOD :)
+    if(itemArrayList!=null){
+        itemArrayList.remove(item);} //NO GOOD (I think):)
+
 }
 
 
