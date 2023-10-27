@@ -39,6 +39,14 @@ public class Player {
     public void setWater(int water) {
         this.water = water;
     }
+    public boolean hasWater(){
+        if (water>0){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }
 
     //Methods for drop() and pickup()

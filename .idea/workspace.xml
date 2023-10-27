@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2248e123-b9d6-4fb2-91ac-3f39009bbe6a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/woz/woz/CommandCollect.java" beforeDir="false" afterPath="$PROJECT_DIR$/woz/woz/CommandCollect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/woz/woz/Context.java" beforeDir="false" afterPath="$PROJECT_DIR$/woz/woz/Context.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/woz/woz/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/woz/woz/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/woz/woz/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/woz/woz/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/woz/woz/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/woz/woz/Space.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +36,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "main",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
