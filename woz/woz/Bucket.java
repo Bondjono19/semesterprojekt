@@ -8,16 +8,16 @@ public class Bucket extends Item {
     }
 
     @Override
-    final public void setItemName(String newItemName) { //FINAL cuz why not
+    public void setItemName(String newItemName) { //FINAL cuz why not
         super.setItemName("Bucket");
     }
     @Override
-    final public void setItemDescription (String newItemDescription){ //FINAL cuz why not
+    public void setItemDescription (String newItemDescription){
         super.setItemDescription("A roughly cylindrical open container with a handle," +
                 " made of metal. Used to hold and carry liquids.");
     }
     @Override
-    final public void setItemPrice (int itemPrice){ //FINAL cuz why not
+    public void setItemPrice (int itemPrice){ //FINAL cuz why not
         super.setItemPrice(0);
     }
 
