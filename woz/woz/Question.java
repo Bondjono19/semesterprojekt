@@ -12,4 +12,9 @@ public class Question{
         this.answer3  = a3;
     }
 
+
+    public void askQuestion(){
+        
+    }
+
 }

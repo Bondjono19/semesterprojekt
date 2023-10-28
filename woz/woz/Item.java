@@ -2,6 +2,10 @@ public abstract class Item {
     private String itemName;
     private String itemDescription;
     private int itemPrice;
+    private int capacity;
+    private boolean roughFiltered = false;
+    private boolean fineFiltered = false;
+    private boolean coalFiltered = false;
 
     public Item(String itemName, String itemDescription, int itemPrice){ //Contructor
         this.itemName=itemName;
