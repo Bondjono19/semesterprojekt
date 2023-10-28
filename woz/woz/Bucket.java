@@ -8,7 +8,7 @@ public class Bucket extends Item {
     }
 
     @Override
-    public void setItemName(String newItemName) { //FINAL cuz why not
+    public void setItemName(String newItemName) {
         super.setItemName("Bucket");
     }
     @Override
@@ -17,7 +17,7 @@ public class Bucket extends Item {
                 " made of metal. Used to hold and carry liquids.");
     }
     @Override
-    public void setItemPrice (int itemPrice){ //FINAL cuz why not
+    public void setItemPrice (int itemPrice){
         super.setItemPrice(0);
     }
 
