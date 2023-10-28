@@ -1,11 +1,12 @@
 public abstract class Item {
     private String itemName;
     private String itemDescription;
-    private int price;
+    private int itemPrice;
 
-    public Item(String itemName, String itemDescription){ //Contructor
+    public Item(String itemName, String itemDescription, int itemPrice){ //Contructor
         this.itemName=itemName;
         this.itemDescription=itemDescription;
+        this.itemPrice=itemPrice;
     }
 
     //Getter
@@ -16,7 +17,7 @@ public abstract class Item {
         return itemDescription;
     }
     public int getItemPrice(){
-        return price;
+        return itemPrice;
     }
 
     //Setter
