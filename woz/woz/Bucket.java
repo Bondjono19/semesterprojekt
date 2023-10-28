@@ -3,7 +3,7 @@
 // This code can be copy-pasted and adjusted to other Items in the game <-- IMPORTANT
 public class Bucket extends Item {
     public Bucket(String itemName, String itemDescription, int itemPrice) {
-        super(itemName, itemDescription, itemPrice);
+        super(itemName, itemDescription, itemPrice); //Contructor
 
     }
 
