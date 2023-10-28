@@ -13,7 +13,7 @@ public class Inventory {
     /*Inventory(ArrayList<Item> itemArrayList){
         this.itemArrayList=itemArrayList;
     }*/
-    public ArrayList<Item> getInventory(){ //Getter method
+    public ArrayList<Item> getInventoryContents(){ //Getter method
         return itemArrayList;
     }
 

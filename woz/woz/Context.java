@@ -5,12 +5,20 @@ class Context {
   Space current;
   boolean done = false;
   Player player;
+  Shop shop;
+  Inventory inventory;
 
-  Context (Space node,Player playerIn) {
+  Context (Space node,Player playerIn,Shop shopIn, Inventory inventoryIn) {
     current = node;
     player = playerIn;
+    shop = shopIn;
+    inventory = inventoryIn;
   }
   
+  public Inventory getInventory(){
+    return inventory;
+  }
+
   public Player getPlayer(){
     return player;
   }
@@ -19,6 +27,10 @@ class Context {
     return current;
   }
   
+  public Shop getShop(){
+    return shop;
+  }
+
   public void transition (String direction) {
     Space next = current.followEdge(direction);
     if (next==null) {
