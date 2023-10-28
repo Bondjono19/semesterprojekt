@@ -24,4 +24,9 @@ public class CommandBuy extends BaseCommand implements Command{
             System.out.println("Go to the shop first!");
         }
     }
+
+    private void purchaseItem(){
+        
+    }
+
 }

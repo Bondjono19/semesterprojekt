@@ -6,13 +6,19 @@ class Context {
   boolean done = false;
   Player player;
   Shop shop;
+  Inventory inventory;
 
-  Context (Space node,Player playerIn,Shop shopIn) {
+  Context (Space node,Player playerIn,Shop shopIn, Inventory inventoryIn) {
     current = node;
     player = playerIn;
     shop = shopIn;
+    inventory = inventoryIn;
   }
   
+  public Inventory getInventory(){
+    return inventory;
+  }
+
   public Player getPlayer(){
     return player;
   }

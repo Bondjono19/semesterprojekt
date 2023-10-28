@@ -3,9 +3,7 @@ public abstract class Item {
     private String itemDescription;
     private int itemPrice;
     private int capacity;
-    private boolean roughFiltered = false;
-    private boolean fineFiltered = false;
-    private boolean coalFiltered = false;
+    private boolean[] filtered = new boolean[3];
 
     public Item(String itemName, String itemDescription, int itemPrice){ //Contructor
         this.itemName=itemName;
@@ -22,6 +20,9 @@ public abstract class Item {
     }
     public int getItemPrice(){
         return itemPrice;
+    }
+    public boolean[] getFiltered(){
+        return filtered;
     }
 
     //Setter
@@ -41,6 +42,10 @@ public abstract class Item {
         itemPrice=newItemPrice;
     }
 
+    public void setFiltered(int i,boolean value){
 
+        filtered[i] = value;
+
+    }
 
 }

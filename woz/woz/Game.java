@@ -13,7 +13,7 @@ class Game {
 
   static Player player     = new Player(0,"navn");
   static Shop shop         = new Shop();
-  static Context  context  = new Context(world.getEntry(),player,shop);
+  static Context  context  = new Context(world.getEntry(),player,shop,inventory);
   static Registry registry = new Registry(context, fallback);
 
 
