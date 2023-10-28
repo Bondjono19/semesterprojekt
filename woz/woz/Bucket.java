@@ -14,7 +14,7 @@ public class Bucket extends Item {
     @Override
     public void setItemDescription (String newItemDescription){
         super.setItemDescription("A roughly cylindrical open container with a handle," +
-                " made of metal. Used to hold and carry liquids.");
+                "\n made of metal. Used to hold and carry liquids.");
     }
     @Override
     public void setItemPrice (int itemPrice){
