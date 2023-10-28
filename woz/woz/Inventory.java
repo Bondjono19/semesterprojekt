@@ -8,12 +8,12 @@ public class Inventory {
 
 
     //-Make ArrayList of items
-    private ArrayList<Item> itemArrayList= new ArrayList(); //ONLY HAS ACCESS TO ITEM'S METHODS
+    private ArrayList<Item> itemArrayList= new ArrayList<Item>(); //ONLY HAS ACCESS TO ITEM'S METHODS
 
     /*Inventory(ArrayList<Item> itemArrayList){
         this.itemArrayList=itemArrayList;
     }*/
-    public ArrayList<Item> displayInventory(){ //Getter method
+    public ArrayList<Item> getInventory(){ //Getter method
         return itemArrayList;
     }
 
