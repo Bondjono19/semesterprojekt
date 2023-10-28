@@ -22,11 +22,19 @@ public abstract class Item {
 
     //Setter
     public void setItemName(String newItemName){
-        itemName=newItemName;
+        if(newItemName == null){
+            itemName="(UNKNOWN-ITEM)"; //Checks if the item name is legal.
+        }
+        else {
+            itemName=newItemName;
+        }
     }
 
     public void setItemDescription(String newItemDescription){
         itemDescription=newItemDescription;
+    }
+    public void setItemPrice(int newItemPrice){
+        itemPrice=newItemPrice;
     }
 
 
