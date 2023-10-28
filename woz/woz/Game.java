@@ -1,7 +1,6 @@
 /* Main class for launching the game
  */
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 class Game {
@@ -25,6 +24,7 @@ class Game {
     registry.register("bye", cmdExit);
     registry.register("go", new CommandGo());
     registry.register("help", new CommandHelp(registry));
+    registry.register("clean", new CommandClean());
   }
   
   public static void main (String args[]) {

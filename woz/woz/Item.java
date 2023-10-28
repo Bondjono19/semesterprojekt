@@ -1,6 +1,7 @@
 public abstract class Item {
     private String itemName;
     private String itemDescription;
+    private int price;
 
     public Item(String itemName, String itemDescription){ //Contructor
         this.itemName=itemName;
@@ -13,6 +14,9 @@ public abstract class Item {
     }
     public String getItemDescription(){
         return itemDescription;
+    }
+    public int getItemPrice(){
+        return price;
     }
 
     //Setter

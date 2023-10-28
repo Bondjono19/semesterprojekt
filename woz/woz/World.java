@@ -47,6 +47,7 @@ class World {
 
     fine_filter.addEdge("north", entry);
     fine_filter.addEdge("east", active_coal_filter);
+    fine_filter.addEdge("west",rough_filter);
 
     active_coal_filter.addEdge("west", fine_filter);
     active_coal_filter.addEdge("north", Shop);
