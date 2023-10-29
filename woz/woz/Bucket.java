@@ -2,8 +2,8 @@
 // Therefore Bucket will not hold many liters.
 // This code can be copy-pasted and adjusted to other Items in the game <-- IMPORTANT
 public class Bucket extends Item {
-    public Bucket(String itemName, String itemDescription, int itemPrice) {
-        super(itemName, itemDescription, itemPrice); //Contructor
+    public Bucket(String itemName, String itemDescription, int itemPrice, int capacity) {
+        super(itemName, itemDescription, itemPrice,capacity); //Contructor
 
     }
 

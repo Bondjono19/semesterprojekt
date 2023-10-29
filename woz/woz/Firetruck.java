@@ -1,6 +1,6 @@
 public class Firetruck extends Item{
-    public Firetruck(String itemName, String itemDescription, int itemPrice) {
-        super(itemName, itemDescription, itemPrice); //Contructor
+    public Firetruck(String itemName, String itemDescription, int itemPrice, int capacity) {
+        super(itemName, itemDescription, itemPrice, capacity); //Contructor
 
     }
 

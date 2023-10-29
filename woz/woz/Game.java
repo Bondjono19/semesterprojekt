@@ -29,8 +29,8 @@ class Game {
     registry.register("buy", new CommandBuy());
   }
   private static void initItems (){
-    Item testitem1 = new Bucket("lol","hejsa",100);
-    Item testitem2 = new Bucket("andetitem","hejsa2",1039);
+    Item testitem1 = new Bucket("lol","hejsa",100,3);
+    Item testitem2 = new Bucket("andetitem","hejsa2",1039,3);
     shop.shopItems.add(testitem1);
     shop.shopItems.add(testitem2);
   }

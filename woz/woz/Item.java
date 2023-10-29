@@ -5,10 +5,11 @@ public abstract class Item {
     private int capacity;
     private boolean[] filtered = new boolean[3];
 
-    public Item(String itemName, String itemDescription, int itemPrice){ //Contructor
+    public Item(String itemName, String itemDescription,int itemPrice ,int capacity){ //Contructor
         this.itemName=itemName;
         this.itemDescription=itemDescription;
         this.itemPrice=itemPrice;
+        this.capacity=capacity;
     }
 
     //Getter
@@ -23,6 +24,9 @@ public abstract class Item {
     }
     public boolean[] getFiltered(){
         return filtered;
+    }
+    public int getItemCapacity(){
+        return capacity;
     }
 
     //Setter
