@@ -29,7 +29,7 @@ public class Inventory {
     // removeItem method
     public void removeItem(Item item){
     if(itemArrayList!=null){
-        itemArrayList.remove(item);} //NO GOOD (I think):)
+        itemArrayList.remove(item);} //NO GOOD (I think):) Make some command that uses this method same with addItem
     }
 
 
