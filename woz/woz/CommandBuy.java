@@ -4,7 +4,8 @@ public class CommandBuy extends BaseCommand implements Command{
     public void execute(Context context, String command, String parameters[]){
         if(context.getCurrent().name=="Shop"){
             int balance = context.getPlayer().getPoints();
-            Shop shop = context.getShop();
+            shopitems=context.getShop().getShopItems();
+            inventory=context.getInventory().getInventoryContents();
             try{
                 if(parameters[0].equals("list")){
                     shop.listShopItems();
