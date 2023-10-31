@@ -9,7 +9,7 @@ public class CommandBuy extends BaseCommand implements Command{
                 if(parameters[0].equals("list")){
                     shop.listShopItems();
                 }else if(parameters[0].equals("bucket")){
-                    //code for appending item to inventory, subtracting money and so on
+                    
                 }else if(parameters[0].equals("wheelbarrow")){
                     //code for appendinng wheelbarrow...
                 }else if(parameters[0].equals("firetruck")){
@@ -23,10 +23,6 @@ public class CommandBuy extends BaseCommand implements Command{
         else{
             System.out.println("Go to the shop first!");
         }
-    }
-
-    private void purchaseItem(){
-        
     }
 
 }

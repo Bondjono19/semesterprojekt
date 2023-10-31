@@ -33,6 +33,7 @@ class Game {
     Item testitem2 = new Bucket("andetitem","hejsa2",1039,3);
     shop.shopItems.add(testitem1);
     shop.shopItems.add(testitem2);
+    inventory.addItem(testitem2);
   }
   
   public static void main (String args[]) {
