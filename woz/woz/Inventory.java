@@ -20,7 +20,7 @@ public class Inventory {
 
     // addItem method
     public void addItem(Item item){
-        if(itemArrayList.size()<=3){         //If the inventory size is under 3 you can add an item.
+        if(itemArrayList.size()<=10000){         //If the inventory size is under 3 you can add an item.
             itemArrayList.add(item);}
 
     }
