@@ -27,6 +27,8 @@ class Game {
     registry.register("help", new CommandHelp(registry));
     registry.register("clean", new CommandClean());
     registry.register("buy", new CommandBuy());
+    registry.register("stats", new CommandStats());
+    registry.register("pour", new CommandPour());
   }
   private static void initItems (){
     Item testitem1 = new Bucket("lol","hejsa",100,3);

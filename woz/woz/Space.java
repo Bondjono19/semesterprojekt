@@ -16,6 +16,9 @@ class Space extends Node {
     return water;
   }
   
+  public void setWaterAmount(int amount){
+    water = amount;
+  }
 
   public boolean drainWater(int amount){
     if(water>=amount){
