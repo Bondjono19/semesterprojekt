@@ -34,6 +34,7 @@ class Game {
     shop.shopItems.add(testitem1);
     shop.shopItems.add(testitem2);
     inventory.addItem(testitem2);
+    inventory.addItem(testitem1);
   }
   
   public static void main (String args[]) {

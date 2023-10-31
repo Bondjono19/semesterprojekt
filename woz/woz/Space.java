@@ -23,7 +23,6 @@ class Space extends Node {
       System.out.println("Water collected successfully - " + water + " liters left.");
       return true;
     }else{
-      System.out.println("No water here");
       return false;
     }
 
