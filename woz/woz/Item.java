@@ -42,6 +42,9 @@ public abstract class Item {
             itemName=newItemName;
         }
     }
+    public void setCapacity(int newCapacity){
+        capacity=newCapacity;
+    }
 
     public void setItemDescription(String newItemDescription){
         itemDescription=newItemDescription;
