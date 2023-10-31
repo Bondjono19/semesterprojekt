@@ -15,7 +15,7 @@ public class CommandClean extends BaseCommand implements Command {
                         System.out.println("You have no water in item " + inventory.get(i).getItemName());
                         break;
                     }
-                    if (inventory.get(i).getFiltered()[0] == false) {
+                    if (inventory.get(i).getFiltered()[i] == false) {
                         inventory.get(i).setFiltered(i, true);
                         System.out.println("Water filtered successfully for item " + inventory.get(i).getItemName());
                         context.getPlayer().setPoints(context.getPlayer().getPoints() + 10);
