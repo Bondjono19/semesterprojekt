@@ -18,6 +18,7 @@ class Space extends Node {
   
   public void setWaterAmount(int amount){
     water = amount;
+    System.out.println("Water poured successfully - " + water + " liters here now.");
   }
 
   public boolean drainWater(int amount){
