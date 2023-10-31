@@ -31,8 +31,10 @@ class Game {
   private static void initItems (){
     Item testitem1 = new Bucket("lol","hejsa",100,3);
     Item testitem2 = new Bucket("andetitem","hejsa2",1039,3);
+    Item nytItem = new Bucket("bucket","ta vand med dette",100,3);
     shop.getShopItems().add(testitem1);
     shop.getShopItems().add(testitem2);
+    shop.getShopItems().add(nytItem);
     inventory.addItem(testitem2);
     inventory.addItem(testitem1);
   }
