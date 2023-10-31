@@ -4,6 +4,7 @@ public abstract class Item {
     private int itemPrice;
     private int capacity;
     private boolean[] filtered = new boolean[3];
+    private boolean isFull = false;
 
     public Item(String itemName, String itemDescription,int itemPrice ,int capacity){ //Contructor
         this.itemName=itemName;
@@ -28,6 +29,9 @@ public abstract class Item {
     public int getItemCapacity(){
         return capacity;
     }
+    public boolean getIsFull(){
+        return isFull;
+    }
 
     //Setter
     public void setItemName(String newItemName){
@@ -50,6 +54,9 @@ public abstract class Item {
 
         filtered[i] = value;
 
+    }
+    public void fill(boolean value){
+        isFull = value;
     }
 
 }
