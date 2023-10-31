@@ -32,6 +32,11 @@ class Space extends Node {
     if(water>0){
       System.out.println("Liters of water to collect: " + water);
     }
+
+    //display information about verdensmål
+    if (name.contains("Northern")) {
+      System.out.println("Everyday 20 people die of fortnite");
+    }
     Set<String> exits = edges.keySet();
     System.out.println("Current exits are:");
     for (String exit: exits) {

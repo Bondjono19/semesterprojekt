@@ -39,7 +39,6 @@ class Game {
   
   public static void main (String args[]) {
     System.out.println("Welcome to the World of Zuul!");
-    
     initRegistry();
     initItems();
     context.getCurrent().welcome();
@@ -47,8 +46,32 @@ class Game {
     while (context.isDone()==false) {
       System.out.print("> ");
       String line = scanner.nextLine();
-      registry.dispatch(line);
+
+      if (context.getCurrent().getName().contains("Reservoir")) {
+        // Prompt the player with a question and options in the Water Reservoir
+        System.out.println("You've entered the Water Reservoir.");
+        System.out.println("Answer this question:");
+        System.out.println("What do people die of?" + "please answer using the numerial valuego");
+        System.out.println("1. war");
+        System.out.println("2. fortnite");
+        System.out.println("3. herpes");
+        System.out.println("4. sygdom");
+
+        int playerAnswer = scanner.nextInt();
+        scanner.nextLine();
+
+        // Check the player's answer
+        if (playerAnswer == 2) {
+          System.out.println("Correct! You've earned 1 points.");
+          context.getPlayer().setPoints(context.getPlayer().getPoints() + 1);
+        } else {
+          System.out.println("Incorrect. Try again.");
+        }
+    } else {
+        registry.dispatch(line);
     }
-    System.out.println("Game Over");
+  }
+  System.out.println("Game Over");
   }
 }
+
