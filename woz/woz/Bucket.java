@@ -20,6 +20,9 @@ public class Bucket extends Item {
     public void setItemPrice (int itemPrice){
         super.setItemPrice(0);
     }
+    public static int getPrice(){
+        return 10;
+    }
     @Override
     public void setCapacity (int capacity){super.setCapacity(2);}
 
