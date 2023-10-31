@@ -17,14 +17,13 @@ class Space extends Node {
   }
   
 
-  public void drainWater(int amount,Player player){
-    if(water>0){
-      water--;
-      int vand = player.getWater();
-      player.setWater(vand+1);
+  public boolean drainWater(int amount){
+    if(water>=amount){
+      water=water-amount;
       System.out.println("Water collected successfully - " + water + " liters left.");
+      return true;
     }else{
-      System.out.println("No water here");
+      return false;
     }
 
   }

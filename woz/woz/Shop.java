@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Shop {
 
-    public ArrayList<Item> shopItems = new ArrayList<Item>();
+    private ArrayList<Item> shopItems = new ArrayList<Item>();
 
 
 
@@ -12,5 +12,10 @@ public class Shop {
             System.out.println(shopItems.get(i).getItemName());
         }
     }
+
+    public ArrayList<Item> getShopItems(){
+        return shopItems;
+    }
+
 
 }
