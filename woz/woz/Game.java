@@ -52,7 +52,7 @@ class Game {
       System.out.print("> ");
       String line = scanner.nextLine();
 
-      if (context.getCurrent().getName().contains("niggercock")) {
+      if (context.getCurrent().getName().contains("eeeee")) {
         // Prompt the player with a question and options in the Water Reservoir
         System.out.println("You've entered the Water Reservoir.");
         System.out.println("Answer this question:");
