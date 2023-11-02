@@ -17,5 +17,5 @@ public class Firetruck extends Item{
         super.setItemPrice(30);
     }
     @Override
-    public void setCapacity (int capacity){super.setCapacity(50);}
+    public void setCapacity (int capacity){super.setCapacity(50);} //Kalder superklassens metode :)
 }

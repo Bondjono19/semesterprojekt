@@ -18,6 +18,6 @@ public class WheelBarrow extends Item{
         super.setItemPrice(10);
     }
     @Override
-    public void setCapacity (int capacity){super.setCapacity(10);}
+    public void setCapacity (int capacity){super.setCapacity(10);} //Kalder superklassens metode :)
 }
 

@@ -24,6 +24,6 @@ public class Bucket extends Item {
         return 10;
     }
     @Override
-    public void setCapacity (int capacity){super.setCapacity(2);}
+    public void setCapacity (int capacity){super.setCapacity(2);} //Kalder superklassens metode :)
 
 }
