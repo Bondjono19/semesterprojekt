@@ -1,34 +1,33 @@
 import java.util.Scanner;
 
 //Bruger drop method fra Inventory klassen.
-public class CommandDrop extends BaseCommand implements Command{
+public class CommandDrop extends BaseCommand implements Command {
     @Override
-    public void execute (Context context, String command, String parameters[]){
-        Inventory inventory= context.getInventory();
-            if (parameters.length<2){
-                System.out.println("drop one item, type number to pick item from list displayed: ");
-                for (int i = 0;i<inventory.getInventoryContents().size();i++){
-                    System.out.println(inventory.getInventoryContents().get(i).getItemName());
-                }
+    public void execute(Context context, String command, String parameters[]) {
+        Inventory inventory = context.getInventory();
+        if (parameters.length < 2) {
+            System.out.println("drop one item, type number to pick item from list displayed: ");
+            for (int i = 0; i < inventory.getInventoryContents().size(); i++) {
+                System.out.println(inventory.getInventoryContents().get(i).getItemName());
             }
-            try{
-                Scanner s = new Scanner(System.in);
-                int choice= s.nextInt();
-                if (choice==1){
-                    System.out.println("First item in inventory has been removed");
-                    inventory.getInventoryContents().remove(0);
-                }
+        }
+        Scanner s = new Scanner(System.in);
+        int choice = s.nextInt();
+        try {
 
-                if (choice==2){
-                    inventory.getInventoryContents().remove(1);
-                    System.out.println("Second item in inventory has been removed");
-                }
+            if (choice == 1 || choice == 2 || choice == 3) { //If backpack is able to be bigger, then this needs to change.
+                choice--;
+                inventory.getInventoryContents().remove(choice);
 
-
-            }catch (Exception e){
-                System.out.println("This item doesn't exist in your inventory or you have no items to drop");
+                System.out.println("Item in inventory has been removed");
+            } else {
+                System.out.println("Not a valid choice");
             }
 
+        } catch (Exception e) {
+            System.out.println("You have no items to drop");
+            // System.out.println(e);
+        }
 
     }
 
