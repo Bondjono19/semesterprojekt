@@ -29,6 +29,7 @@ class Game {
     registry.register("buy", new CommandBuy());
     registry.register("stats", new CommandStats());
     registry.register("pour", new CommandPour());
+    registry.register("drop", new CommandDrop());
   }
   private static void initItems (){
     Item testitem1 = new Bucket("Bucket","hejsa",100,3);

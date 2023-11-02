@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2248e123-b9d6-4fb2-91ac-3f39009bbe6a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/woz/woz/CommandDrop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/Bucket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/semesterprojekt/Bucket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/CommandBuy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/semesterprojekt/CommandBuy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/CommandClean.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/semesterprojekt/CommandClean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/CommandCollect.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/semesterprojekt/CommandCollect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/CommandPour.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/semesterprojekt/CommandPour.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/Firetruck.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/semesterprojekt/Firetruck.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/semesterprojekt/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/Inventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/semesterprojekt/Inventory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/semesterprojekt/Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/Shop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/semesterprojekt/Shop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/Space.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/semesterprojekt/Space.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/WheelBarrow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/semesterprojekt/WheelBarrow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/woz/woz/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/woz/woz/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/woz/woz/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/woz/woz/Inventory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +24,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7

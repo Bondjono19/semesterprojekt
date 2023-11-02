@@ -4,7 +4,7 @@ import org.w3c.dom.ls.LSOutput;
 
 import java.util.ArrayList;
 
-public class Inventory {
+public class Inventory{
 
 
     //-Make ArrayList of items
