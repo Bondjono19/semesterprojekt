@@ -5,6 +5,10 @@ public class CommandCollect extends BaseCommand implements Command {
         Space current = context.getCurrent();
         Inventory inventory = context.getInventory();
         int count = 0;
+        if(!current.name.contains("Watersource")){
+            System.out.println("Location not eligible for pickup");
+            return;
+        }
         for (int i = 0;i<inventory.getInventoryContents().size();i++){
             if(inventory.getInventoryContents().get(i).getIsFull()==true){
                 System.out.println("Item " +inventory.getInventoryContents().get(i).getItemName()+ "  already full");

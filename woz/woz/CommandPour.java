@@ -6,23 +6,39 @@ public class CommandPour extends BaseCommand implements Command{
         Space area = context.getCurrent();
         ArrayList<Item> inventory = context.getInventory().getInventoryContents();
         int amount = 0;
-        if(area.name.equals("Water Reservoir")){
-
-            for(int i = 0;i<inventory.size();i++){
-                if(inventory.get(i).getFiltered()[0]==true && inventory.get(i).getFiltered()[1] && inventory.get(i).getFiltered()[2]==true && inventory.get(i).getIsFull()==true){
-                    amount = amount + inventory.get(i).getItemCapacity();
-                    inventory.get(i).setFiltered(0, false);
-                    inventory.get(i).setFiltered(1, false);
-                    inventory.get(i).setFiltered(2, false);
-                    inventory.get(i).fill(false);
-                    System.out.println("Water poured from item " + inventory.get(i).getItemName());
-                }
-            }
-            area.setWaterAmount(area.getWaterAmount()+amount);
+        if(inventory.size()==0){
+            System.out.println("You don't have any items.");
         }
         else{
-            System.out.println("Can't pour water here!");
+            if(area.name.contains("Reservoir")){
+                for(int i = 0;i<inventory.size();i++){
+                    if(inventory.get(i).getFiltered()[0]==true && inventory.get(i).getFiltered()[1]==true && inventory.get(i).getFiltered()[2]==true && inventory.get(i).getIsFull()==true){
+                        amount = inventory.get(i).getItemCapacity();
+                        area.setWaterAmount(area.getWaterAmount()+amount);
+                        inventory.get(i).setFiltered(0, false);
+                        inventory.get(i).setFiltered(1, false);
+                        inventory.get(i).setFiltered(2, false);
+                        inventory.get(i).fill(false);
+                        System.out.println("Water poured from item " + inventory.get(i).getItemName() + " successfully - 100 points awarded.");
+                        context.getPlayer().setPoints(context.getPlayer().getPoints()+100);
+                    }else if(inventory.get(i).getIsFull()==true){
+                        inventory.get(i).setFiltered(0, false);
+                        inventory.get(i).setFiltered(1, false);
+                        inventory.get(i).setFiltered(2, false);
+                        inventory.get(i).fill(false);
+                        System.out.println("You poured dirty water into the water reservoir from item " + inventory.get(i).getItemName() + " causing it all to go bad. 1000 points deducted.");
+                        context.getPlayer().setPoints(context.getPlayer().getPoints()-1000);
+                        context.getCurrent().setWaterAmount(0);
+                    }else{
+                        System.out.println("No water in item: " + inventory.get(i).getItemName());
+                    }
+                }
+            }
+            else{
+                System.out.println("Can't pour water here!");
+            }
         }
+        
 
     }
 
