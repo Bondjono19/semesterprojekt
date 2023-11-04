@@ -1,36 +1,66 @@
 import java.util.ArrayList;
-public class CommandBuy extends BaseCommand implements Command{
-    
+
+public class CommandBuy extends BaseCommand implements Command {
+
+    // public static Item itemBucket;
+
     @Override
-    public void execute(Context context, String command, String parameters[]){
-        if(context.getCurrent().name=="Shop"){
+    public void execute(Context context, String command, String parameters[]) {
+        if (context.getCurrent().name == "Shop") {
             int balance = context.getPlayer().getPoints();
             Shop shop = context.getShop();
             ArrayList<Item> shopItems = shop.getShopItems();
-            ArrayList<Item> inventory=context.getInventory().getInventoryContents();
-            Item testitem1 = new Bucket("Bucket","A roughly cylindrical open container with a handle, made of metal. Used to hold and carry liquids.",0,10);
-            try{
-                
-                if(parameters[0].equals("list")){
+            ArrayList<Item> inventory = context.getInventory().getInventoryContents();
+
+            try {
+                if (parameters[0].equals("list")) {
                     shop.listShopItems();
-                }else if(parameters[0].equals("bucket")){ //
-                    if ((balance - Bucket.getPrice()) >= 0){
-                        System.out.println("Get your money not your funny up or collect points");
-                        inventory.add(testitem1);
-                    }else {
-                        System.out.println("Fuck oof");
+
+                } else if (parameters[0].equals("bucket")) {
+                    if ((balance - Bucket.getPrice()) >= 0 && shop.gg("Bucket") == true) {
+                        System.out.println("You bought a bucket");
+                        shopItems.remove(shop.itemBucket);
+
+                        inventory.add(shop.itemBucket);
+
+                    } else if ((balance - Bucket.getPrice()) >= 0 && shop.gg("Bucket") != true) {
+                        System.out.println("No more bucket's");
+                    } else {
+                        System.out.println("Not enough points");
                     }
-                }else if(parameters[0].equals("wheelbarrow")){
-                    //code for appendinng wheelbarrow...
-                }else if(parameters[0].equals("firetruck")){
-                    //code for appending firetruck
+                } 
+                
+                else if (parameters[0].equals("wheelbarrow")) {
+                    if ((balance - WheelBarrow.getPrice()) >= 0 && shop.gg("Wheelbarrow") == true) {
+                        System.out.println("You bought a wheelbarrow");
+                        shopItems.remove(shop.itemWheelbarrow);
+
+                        inventory.add(shop.itemWheelbarrow);
+
+                    } else if ((balance - WheelBarrow.getPrice()) >= 0 && shop.gg("Wheelbarrow") != true) {
+                        System.out.println("No more wheelbarrow's");
+                    } else {
+                        System.out.println("Not enough points");
+                    }
+                } 
+                
+                else if (parameters[0].equals("firetruck")) {
+                    if ((balance - Firetruck.getPrice()) >= 0 && shop.gg("Firetruck") == true) {
+                        System.out.println("You bought a firetruck");
+                        shopItems.remove(shop.itemWheelbarrow);
+
+                        inventory.add(shop.itemWheelbarrow);
+
+                    } else if ((balance - Firetruck.getPrice()) >= 0 && shop.gg("Firetruck") != true) {
+                        System.out.println("No more firetruck's");
+                    } else {
+                        System.out.println("Not enough points");
+                    }
                 }
-            }
-            catch (Exception e){
+            } catch (Exception e) {
                 System.out.println("You need to specify what to buy: 'buy item_name/list' ");
             }
-        }
-        else{
+        } else {
             System.out.println("Go to the shop first!");
         }
     }

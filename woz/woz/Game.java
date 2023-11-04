@@ -32,15 +32,12 @@ class Game {
     registry.register("drop", new CommandDrop());
   }
   private static void initItems (){
-    Item testitem1 = new Bucket("Bucket","hejsa",100,3);
-    Item testitem2 = new Bucket("andetitem","hejsa2",1039,3);
-    Item nytItem = new Bucket("bucket","ta vand med dette",100,3);
-    shop.getShopItems().add(testitem1);
-    shop.getShopItems().add(testitem2);
-    shop.getShopItems().add(nytItem);
-    inventory.addItem(testitem2);
-    inventory.addItem(testitem1);
+    shop.getShopItems().add(shop.itemBucket);
+    shop.getShopItems().add(shop.itemWheelbarrow);
+    // shop.getShopItems().add(shop.itemFiretruck);
+    inventory.addItem(shop.itemBucket);
   }
+
   
   public static void main (String args[]) {
     System.out.println("Welcome to the World of Zuul!");
