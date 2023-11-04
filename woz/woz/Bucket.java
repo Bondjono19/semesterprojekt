@@ -4,12 +4,11 @@
 public class Bucket extends Item {
     public Bucket(String itemName, String itemDescription, int itemPrice, int capacity) {
         super(itemName, itemDescription, itemPrice,capacity); //Contructor
-
     }
 
     @Override
     public void setItemName(String newItemName) {
-        super.setItemName("Bucket");
+        super.setItemName("bucket");
     }
     @Override
     public void setItemDescription (String newItemDescription){
@@ -18,7 +17,7 @@ public class Bucket extends Item {
     }
     @Override
     public void setItemPrice (int itemPrice){
-        super.setItemPrice(0);
+        super.setItemPrice(itemPrice);
     }
     public static int getPrice(){
         return 0;

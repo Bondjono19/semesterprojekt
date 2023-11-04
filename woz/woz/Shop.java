@@ -4,10 +4,11 @@ import java.util.ArrayList;
 
 public class Shop {
 
+    
     private ArrayList<Item> shopItems = new ArrayList<Item>();
 
     public Item itemBucket = new Bucket("Bucket",
-            "A roughly cylindrical open container with a handle, made of metal. Used to hold and carry liquids.", 0,
+            "A roughly cylindrical open container with a handle, made of metal. Used to hold and carry liquids.", 10,
             2);
     public Item itemWheelbarrow = new WheelBarrow("Wheelbarrow",
             "A small cart with a single wheel at the front, used typically for carrying loads in building work or gardening.",

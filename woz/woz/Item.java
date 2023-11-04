@@ -11,6 +11,10 @@ public abstract class Item {
         this.itemDescription=itemDescription;
         this.itemPrice=itemPrice;
         this.capacity=capacity;
+        this.isFull = false;
+        this.filtered[0] = false;
+        this.filtered[1] = false;
+        this.filtered[2] = false;
     }
 
     //Getter

@@ -1,8 +1,14 @@
 import java.util.ArrayList;
 public class CommandPour extends BaseCommand implements Command{
     
+
+    CommandPour(){
+        description = "Used to pour water.";
+    }
+
     @Override
     public void execute(Context context, String command, String parameters[]){
+
         Space area = context.getCurrent();
         ArrayList<Item> inventory = context.getInventory().getInventoryContents();
         int amount = 0;

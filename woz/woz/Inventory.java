@@ -32,7 +32,9 @@ public class Inventory{
         itemArrayList.remove(item);} //NO GOOD (I think):) Make some command that uses this method same with addItem
     }
 
-
+    public void newItemtoInventory(){
+        addItem(new Bucket("dw","wd",2,2));
+    }
 
 
 

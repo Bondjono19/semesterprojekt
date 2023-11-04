@@ -2,6 +2,11 @@ import java.util.Scanner;
 
 //Bruger drop method fra Inventory klassen.
 public class CommandDrop extends BaseCommand implements Command {
+
+    CommandDrop(){
+        description = "Used to drop items.";
+    }
+
     @Override
     public void execute(Context context, String command, String parameters[]) {
         Inventory inventory = context.getInventory();

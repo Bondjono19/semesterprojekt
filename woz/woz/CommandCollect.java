@@ -1,10 +1,17 @@
 public class CommandCollect extends BaseCommand implements Command {
     
+
+    CommandCollect(){
+        description = "Used to collect water.";
+    }
+
     @Override
     public void execute(Context context, String command, String parameters[]){
         Space current = context.getCurrent();
         Inventory inventory = context.getInventory();
         int count = 0;
+
+
         if(!current.name.contains("Watersource")){
             System.out.println("Location not eligible for pickup");
             return;

@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 public class CommandClean extends BaseCommand implements Command {
 
+    CommandClean(){
+        description = "Used to clean water.";
+    }
 
     @Override
     public void execute(Context context, String command, String Parameters[]) {

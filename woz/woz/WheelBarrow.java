@@ -6,7 +6,7 @@ public class WheelBarrow extends Item{
 
     @Override
     public void setItemName(String newItemName) {
-        super.setItemName("Wheelbarrow");
+        super.setItemName("wheelbarrow");
     }
     @Override
     public void setItemDescription (String newItemDescription){

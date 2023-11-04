@@ -6,7 +6,7 @@ public class Firetruck extends Item{
 
     @Override
     public void setItemName(String newItemName) {
-        super.setItemName("Firetruck");
+        super.setItemName("firetruck");
     }
     @Override
     public void setItemDescription (String newItemDescription){

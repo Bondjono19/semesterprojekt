@@ -4,14 +4,17 @@ public class CommandBuy extends BaseCommand implements Command {
 
     // public static Item itemBucket;
 
+    CommandBuy () {
+        description = "Used to buy items";
+      }
+
     @Override
     public void execute(Context context, String command, String parameters[]) {
         if (context.getCurrent().name == "Shop") {
             int balance = context.getPlayer().getPoints();
             Shop shop = context.getShop();
             ArrayList<Item> shopItems = shop.getShopItems();
-            ArrayList<Item> inventory = context.getInventory().getInventoryContents();
-
+            parameters[0] = parameters[0].toLowerCase();
             try {
                 if (parameters[0].equals("list")) {
                     shop.listShopItems();
@@ -19,14 +22,14 @@ public class CommandBuy extends BaseCommand implements Command {
 
                 else if (parameters[0].equals("bucket")) {
                     if (shop.gg("Bucket") != true) {
-                        System.out.println("No more bucket's");
+                        System.out.println("No more buckets");
                     } 
-                    else if ((balance - shop.itemBucket.getItemPrice()) >= 0 && shop.gg("Bucket") == true) {
+                    else if ((balance - shop.itemBucket.getItemPrice()) >= 0  && shop.gg("Bucket") == true) {
                         System.out.println("You bought a bucket");
                         shopItems.remove(shop.itemBucket);
-
-                        inventory.add(shop.itemBucket);
-
+                        context.getInventory().addItem(new Bucket("bucket", "description", 5, 2));
+                        context.getPlayer().setPoints(balance-(shop.itemBucket.getItemPrice()));
+                         
                     }
                     else {
                         System.out.println("Not enough points");
@@ -41,8 +44,8 @@ public class CommandBuy extends BaseCommand implements Command {
                         System.out.println("You bought a wheelbarrow");
                         shopItems.remove(shop.itemWheelbarrow);
 
-                        inventory.add(shop.itemWheelbarrow);
-
+                        context.getInventory().addItem(new WheelBarrow("wheelbarrow", "description", 10, 10));
+                        context.getPlayer().setPoints(balance-(shop.itemWheelbarrow.getItemPrice()));
                     } 
                     else {
                         System.out.println("Not enough points");
@@ -55,10 +58,10 @@ public class CommandBuy extends BaseCommand implements Command {
                     } 
                     else if ((balance - shop.itemFiretruck.getItemPrice()) >= 0 && shop.gg("Firetruck") == true) {
                         System.out.println("You bought a firetruck");
-                        shopItems.remove(shop.itemWheelbarrow);
+                        shopItems.remove(shop.itemFiretruck);
 
-                        inventory.add(shop.itemWheelbarrow);
-
+                        context.getInventory().addItem(new Firetruck("firetruck", "description", 100, 50));
+                        context.getPlayer().setPoints(balance-(shop.itemFiretruck.getItemPrice()));
                     }
                     else {
                         System.out.println("Not enough points");
