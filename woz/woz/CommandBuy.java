@@ -15,45 +15,52 @@ public class CommandBuy extends BaseCommand implements Command {
             try {
                 if (parameters[0].equals("list")) {
                     shop.listShopItems();
+                } 
 
-                } else if (parameters[0].equals("bucket")) {
-                    if ((balance - Bucket.getPrice()) >= 0 && shop.gg("Bucket") == true) {
+                else if (parameters[0].equals("bucket")) {
+                    if (shop.gg("Bucket") != true) {
+                        System.out.println("No more bucket's");
+                    } 
+                    else if ((balance - shop.itemBucket.getItemPrice()) >= 0 && shop.gg("Bucket") == true) {
                         System.out.println("You bought a bucket");
                         shopItems.remove(shop.itemBucket);
 
                         inventory.add(shop.itemBucket);
 
-                    } else if ((balance - Bucket.getPrice()) >= 0 && shop.gg("Bucket") != true) {
-                        System.out.println("No more bucket's");
-                    } else {
+                    }
+                    else {
                         System.out.println("Not enough points");
                     }
-                } 
-                
+                }
+
                 else if (parameters[0].equals("wheelbarrow")) {
-                    if ((balance - WheelBarrow.getPrice()) >= 0 && shop.gg("Wheelbarrow") == true) {
+                    if (shop.gg("Wheelbarrow") != true) {
+                        System.out.println("No more wheelbarrow's");
+                    }
+                    else if ((balance - shop.itemWheelbarrow.getItemPrice()) >= 0 && shop.gg("Wheelbarrow") == true) {
                         System.out.println("You bought a wheelbarrow");
                         shopItems.remove(shop.itemWheelbarrow);
 
                         inventory.add(shop.itemWheelbarrow);
 
-                    } else if ((balance - WheelBarrow.getPrice()) >= 0 && shop.gg("Wheelbarrow") != true) {
-                        System.out.println("No more wheelbarrow's");
-                    } else {
+                    } 
+                    else {
                         System.out.println("Not enough points");
                     }
-                } 
-                
+                }
+
                 else if (parameters[0].equals("firetruck")) {
-                    if ((balance - Firetruck.getPrice()) >= 0 && shop.gg("Firetruck") == true) {
+                    if (shop.gg("Firetruck") != true) {
+                        System.out.println("No more firetruck's");
+                    } 
+                    else if ((balance - shop.itemFiretruck.getItemPrice()) >= 0 && shop.gg("Firetruck") == true) {
                         System.out.println("You bought a firetruck");
                         shopItems.remove(shop.itemWheelbarrow);
 
                         inventory.add(shop.itemWheelbarrow);
 
-                    } else if ((balance - Firetruck.getPrice()) >= 0 && shop.gg("Firetruck") != true) {
-                        System.out.println("No more firetruck's");
-                    } else {
+                    }
+                    else {
                         System.out.println("Not enough points");
                     }
                 }
