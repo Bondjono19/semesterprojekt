@@ -37,8 +37,8 @@ class Game {
     shop.getShopItems().add(shop.itemBucket);
     shop.getShopItems().add(shop.itemWheelbarrow);
     // shop.getShopItems().add(shop.itemFiretruck);
-    inventory.addItem(shop.itemBucket);
-    inventory.addItem(shop.itemBucket);
+    inventory.addItem(new Bucket("test2","lol",10,2));
+    inventory.addItem(new Bucket("test","lol",10,2));
   }
 
   

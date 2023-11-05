@@ -12,8 +12,8 @@ public class CommandBuy extends BaseCommand implements Command {
             int balance = context.getPlayer().getPoints();
             Shop shop = context.getShop();
             ArrayList<Item> shopItems = shop.getShopItems();
-            parameters[0] = parameters[0].toLowerCase();
             try {
+                parameters[0] = parameters[0].toLowerCase();
                 if (parameters[0].equals("list")) {
                     shop.listShopItems();
 
