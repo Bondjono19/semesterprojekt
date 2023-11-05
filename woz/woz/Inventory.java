@@ -6,9 +6,9 @@ import java.util.ArrayList;
 
 public class Inventory{
 
-
+    static int maxInvtorySize = 3; // dette 
     //-Make ArrayList of items
-    private ArrayList<Item> itemArrayList= new ArrayList<Item>(); //ONLY HAS ACCESS TO ITEM'S METHODS
+    public static ArrayList<Item> itemArrayList= new ArrayList<Item>(); 
 
     /*Inventory(ArrayList<Item> itemArrayList){
         this.itemArrayList=itemArrayList;
@@ -20,7 +20,7 @@ public class Inventory{
 
     // addItem method
     public void addItem(Item item){
-        if(itemArrayList.size()<=3){         //If the inventory size is under 3 you can add an item.
+        if(itemArrayList.size()<=maxInvtorySize){         //If the inventory size is under 3 you can add an item.
             itemArrayList.add(item);}
 
     }
@@ -35,7 +35,5 @@ public class Inventory{
     public void newItemtoInventory(){
         addItem(new Bucket("dw","wd",2,2));
     }
-
-
 
 }

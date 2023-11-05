@@ -33,8 +33,11 @@ class Game {
   }
   private static void initItems (){
     shop.getShopItems().add(shop.itemBucket);
+    shop.getShopItems().add(shop.itemBucket);
+    shop.getShopItems().add(shop.itemBucket);
     shop.getShopItems().add(shop.itemWheelbarrow);
     // shop.getShopItems().add(shop.itemFiretruck);
+    inventory.addItem(shop.itemBucket);
     inventory.addItem(shop.itemBucket);
   }
 
