@@ -1,6 +1,6 @@
 /*This class contains the items that Player picks up,
 * or to REMOVE them*/
-import org.w3c.dom.ls.LSOutput;
+//import org.w3c.dom.ls.LSOutput;  <---- IDK WHAT IT IS BUT SURE WHATEVER (we don't use)
 
 import java.util.ArrayList;
 

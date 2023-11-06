@@ -32,8 +32,9 @@ public class CommandPour extends BaseCommand implements Command{
                         inventory.get(i).setFiltered(1, false);
                         inventory.get(i).setFiltered(2, false);
                         inventory.get(i).fill(false);
-                        System.out.println("You poured dirty water into the water reservoir from item " + inventory.get(i).getItemName() + " causing it all to go bad. 1000 points deducted.");
-                        context.getPlayer().setPoints(context.getPlayer().getPoints()-1000);
+                        System.out.println("You poured dirty water into the water reservoir from item " +
+                                inventory.get(i).getItemName() + " causing it all to go bad. 25 points deducted.");
+                        context.getPlayer().setPoints(context.getPlayer().getPoints()-25); //Bad behaviour
                         context.getCurrent().setWaterAmount(0);
                     }else{
                         System.out.println("No water in item: " + inventory.get(i).getItemName());

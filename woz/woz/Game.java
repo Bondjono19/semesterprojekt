@@ -54,7 +54,7 @@ class Game {
 
       if (context.getCurrent().getName().contains("eeeee")) {
         // Prompt the player with a question and options in the Water Reservoir
-        System.out.println("You've entered the Water Reservoir.");
+        System.out.println("You've entered the Water Reservoir."); //Skal lige fixe what ever tf det her er LOL (Spørgsmålene)
         System.out.println("Answer this question:");
         System.out.println("What do people die of?" + "please answer using the numerial valuego");
         System.out.println("1. war");

@@ -12,9 +12,9 @@ public class CommandDrop extends BaseCommand implements Command {
         Inventory inventory = context.getInventory();
         int maxDropSize = inventory.getInventoryContents().size();
 
-        // if (parameters.length < 2) {}
+        // if (parameters.length < 2) {} <--- Idriis Schizo rambling
 
-        if (maxDropSize == 0) {
+        if (maxDropSize == 0) { //Logic for drop Command
             System.out.print("You have no items to drop");
         } else {
             System.out.println("Drop one item, type number to pick item from list displayed: ");
