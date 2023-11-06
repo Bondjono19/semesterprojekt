@@ -38,7 +38,7 @@ class Space extends Node {
 
     //display information about verdensmål
     if (name.contains("Northern")) {
-      System.out.println("Everyday 20 people die of fortnite");
+      System.out.println("2.2 billion people lack access to clean water.");
     }
     Set<String> exits = edges.keySet();
     System.out.println("Current exits are:");

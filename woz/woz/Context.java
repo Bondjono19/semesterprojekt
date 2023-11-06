@@ -1,6 +1,3 @@
-/* Context class to hold all context relevant to a session.
- */
-
 class Context {
   Space current;
   boolean done = false;
@@ -8,46 +5,45 @@ class Context {
   Shop shop;
   Inventory inventory;
 
-  Context (Space node,Player playerIn,Shop shopIn, Inventory inventoryIn) {
+  Context(Space node, Player playerIn, Shop shopIn, Inventory inventoryIn) {
     current = node;
     player = playerIn;
     shop = shopIn;
     inventory = inventoryIn;
   }
-  
-  public Inventory getInventory(){
+
+  public Inventory getInventory() {
     return inventory;
   }
 
-  public Player getPlayer(){
+  public Player getPlayer() {
     return player;
   }
 
   public Space getCurrent() {
     return current;
   }
-  
-  public Shop getShop(){
+
+  public Shop getShop() {
     return shop;
   }
 
-  public void transition (String direction) {
+  public void transition(String direction) {
     Space next = current.followEdge(direction);
-    if (next==null) {
-      System.out.println("You are confused, and walk in a circle looking for '"+direction+"'. In the end you give up 😩");
+    if (next == null) {
+      System.out.println("You are confused, and walk in a circle looking for '" + direction + "'. In the end you give up 😩");
     } else {
       current.goodbye();
       current = next;
       current.welcome();
     }
   }
-  
-  public void makeDone () {
+
+  public void makeDone() {
     done = true;
   }
-  
-  public boolean isDone () {
+
+  public boolean isDone() {
     return done;
   }
 }
-
