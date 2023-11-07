@@ -16,12 +16,13 @@ public class Shop {
             10);
 
     public Item itemFiretruck = new Firetruck("Firetruck",
-            "A BIG RED FIRETRUCK!!! This bad boy pumps water like crazy.", 30, 50);
+            "A BIG RED FIRETRUCK!!! This bad boy pumps water like crazy.", 300, 50);
 
     public void listShopItems() {
         for (int i = 0; i < shopItems.size(); i++) {
             System.out.print(" - ");
-            System.out.println(shopItems.get(i).getItemName());
+            System.out.print(shopItems.get(i).getItemName());
+            System.out.println(": "+shopItems.get(i).getItemPrice() + " points");
         }
     }
 

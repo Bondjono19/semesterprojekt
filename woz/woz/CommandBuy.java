@@ -14,11 +14,7 @@ public class CommandBuy extends BaseCommand implements Command {
             ArrayList<Item> shopItems = shop.getShopItems();
             try {
                 parameters[0] = parameters[0].toLowerCase();
-                if (parameters[0].equals("list") && shopItems.size() != 0) {
-                    shop.listShopItems();
-                } else if (shopItems.size() == 0) {
-                    System.out.println("Shop has no more items");
-                } else if (parameters[0].equals("bucket")) {
+                if (parameters[0].equals("bucket")) {
                     if (Inventory.maxInvtorySize == Inventory.itemArrayList.size()) {
                         System.out.println("Not enough space");
                     } else if (shop.gg("Bucket") != true) {
