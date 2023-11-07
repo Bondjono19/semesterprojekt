@@ -23,6 +23,7 @@ class Game {
         registry.register("stats", new CommandStats());
         registry.register("pour", new CommandPour());
         registry.register("drop", new CommandDrop());
+        registry.register("list", new CommandList());
     }
 
     private static void initItems() {
