@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Shop {
 
     
-    private ArrayList<Item> shopItems = new ArrayList<Item>();
+    public static ArrayList<Item> shopItems = new ArrayList<Item>();
 
     public Item itemBucket = new Bucket("Bucket",
             "A roughly cylindrical open container with a handle, made of metal. Used to hold and carry liquids.", 5,

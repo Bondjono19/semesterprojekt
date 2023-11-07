@@ -27,11 +27,9 @@ class Game {
 
     private static void initItems() {
         shop.getShopItems().add(shop.itemBucket);
-        shop.getShopItems().add(shop.itemBucket);
-        shop.getShopItems().add(shop.itemBucket);
         shop.getShopItems().add(shop.itemWheelbarrow);
-        inventory.addItem(new Bucket("test2", "lol", 10, 2));
-        inventory.addItem(new Bucket("test", "lol", 10, 2));
+        shop.getShopItems().add(shop.itemFiretruck);
+        inventory.addItem(new Bucket("Hands", "Your hands", 0, 1));
     }
 
     public static void main(String args[]) {
@@ -43,6 +41,7 @@ class Game {
         boolean askedQuestion = false;
 
         while (!context.isDone()) {
+        System.out.println();
         System.out.print("> ");
         String line = scanner.nextLine();
 
