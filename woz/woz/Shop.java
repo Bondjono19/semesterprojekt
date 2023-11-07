@@ -22,7 +22,7 @@ public class Shop {
         for (int i = 0; i < shopItems.size(); i++) {
             System.out.print(" - ");
             System.out.print(shopItems.get(i).getItemName());
-            System.out.println(": "+shopItems.get(i).getItemPrice() + " Points");
+            System.out.println(": "+shopItems.get(i).getItemPrice() + " points");
         }
     }
 

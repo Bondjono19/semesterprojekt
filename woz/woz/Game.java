@@ -30,7 +30,9 @@ class Game {
         shop.getShopItems().add(shop.itemBucket);
         shop.getShopItems().add(shop.itemWheelbarrow);
         shop.getShopItems().add(shop.itemFiretruck);
-        inventory.addItem(new Bucket("Hands", "Your hands", 0, 1));
+        inventory.addItem(new Bucket("Water Bottle",
+                "A water bottle is a container that is used to hold liquids, mainly water, for the purpose of transporting a drink while travelling or while otherwise away from a supply of potable water",
+                0, 1));
     }
 
     public static void main(String args[]) {
@@ -42,41 +44,42 @@ class Game {
         boolean askedQuestion = false;
 
         while (!context.isDone()) {
-        System.out.println();
-        System.out.print("> ");
-        String line = scanner.nextLine();
+            System.out.println();
+            System.out.print("> ");
+            String line = scanner.nextLine();
+            line = line.toLowerCase();
 
-        if (context.getCurrent().getName().equals("Water Reservoir") && askedQuestion == false) {
-            if (!askedQuestion) {
-                // Prompt the player with a question and options in the Water Reservoir
-                System.out.println("Please answer this question:");
-                System.out.println("How many people lack access to safe water?");
-                System.out.println("1. 3.1 billion");
-                System.out.println("2. 1.5 billion");
-                System.out.println("3. 2.2 billion");
-                System.out.println("4. 2 billion");
+            if (context.getCurrent().getName().equals("Water Reservoir") && askedQuestion == false) {
+                if (!askedQuestion) {
+                    // Prompt the player with a question and options in the Water Reservoir
+                    System.out.println("Please answer this question:");
+                    System.out.println("How many people lack access to safe water?");
+                    System.out.println("1. 3.1 billion");
+                    System.out.println("2. 1.5 billion");
+                    System.out.println("3. 2.2 billion");
+                    System.out.println("4. 2 billion");
 
-                int playerAnswer = scanner.nextInt();
-                scanner.nextLine();
+                    int playerAnswer = scanner.nextInt();
+                    scanner.nextLine();
 
-                // Check the player's answer
-                if (playerAnswer == 3) {
-                    System.out.println("Correct! You've earned 15 point.");
-                    context.getPlayer().setPoints(context.getPlayer().getPoints() + 15);
+                    // Check the player's answer
+                    if (playerAnswer == 3) {
+                        System.out.println("Correct! You've earned 15 point.");
+                        context.getPlayer().setPoints(context.getPlayer().getPoints() + 15);
+                    } else {
+                        System.out.println("Incorrect. Try again.");
+                        context.getPlayer().setPoints(context.getPlayer().getPoints() - 15);
+
+                    }
+
+                    askedQuestion = true;
                 } else {
-                    System.out.println("Incorrect. Try again.");
-                    context.getPlayer().setPoints(context.getPlayer().getPoints() - 15);
-
+                    System.out.println("You've answered the question. You may proceed.");
                 }
-
-                askedQuestion = true;
             } else {
-                System.out.println("You've answered the question. You may proceed.");      
+                registry.dispatch(line);
             }
-        } else {
-            registry.dispatch(line);
         }
-    }
-    System.out.println("Game Over");
+        System.out.println("Game Over");
     }
 }
