@@ -33,7 +33,7 @@ class Space extends Node {
   public void welcome () {
     System.out.println("You are now at " + name + " " + description);
     if(water>0){
-      System.out.println("Liters of water to collect: " + water);
+      System.out.println("Liters of water : " + water);
     }
 
     //display information about verdensmål

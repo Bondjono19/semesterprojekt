@@ -21,6 +21,10 @@ public class CommandPour extends BaseCommand implements Command{
                     if(inventory.get(i).getFiltered()[0]==true && inventory.get(i).getFiltered()[1]==true && inventory.get(i).getFiltered()[2]==true && inventory.get(i).getIsFull()==true){
                         amount = inventory.get(i).getItemCapacity();
                         area.setWaterAmount(area.getWaterAmount()+amount);
+                        if(area.getWaterAmount()>=300){
+                            context.setDone(true);
+                            System.out.println("You have completed the game!");
+                        }
                         inventory.get(i).setFiltered(0, false);
                         inventory.get(i).setFiltered(1, false);
                         inventory.get(i).setFiltered(2, false);
