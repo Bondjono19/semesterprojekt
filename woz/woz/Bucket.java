@@ -6,23 +6,4 @@ public class Bucket extends Item {
         super(itemName, itemDescription, itemPrice,capacity); //Contructor
     }
 
-    @Override
-    public void setItemName(String newItemName) {
-        super.setItemName("bucket");
-    }
-    @Override
-    public void setItemDescription (String newItemDescription){
-        super.setItemDescription("A roughly cylindrical open container with a handle," +
-                "\n made of metal. Used to hold and carry liquids.");
-    }
-    @Override
-    public void setItemPrice (int itemPrice){
-        super.setItemPrice(itemPrice);
-    }
-    public static int getPrice(){
-        return 0;
-    }
-    @Override
-    public void setCapacity (int capacity){super.setCapacity(2);}
-
 }

@@ -4,23 +4,5 @@ public class WheelBarrow extends Item{
 
     }
 
-    @Override
-    public void setItemName(String newItemName) {
-        super.setItemName("wheelbarrow");
-    }
-    @Override
-    public void setItemDescription (String newItemDescription){
-        super.setItemDescription("A small cart with a single wheel at the front." +
-                "\n used typically for carrying loads in building work or gardening.");
-    }
-    @Override
-    public void setItemPrice (int itemPrice){
-        super.setItemPrice(10);
-    }
-    public static int getPrice(){
-        return 10;
-    }
-    @Override
-    public void setCapacity (int capacity){super.setCapacity(10);}
 }
 
