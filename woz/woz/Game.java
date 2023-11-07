@@ -49,7 +49,7 @@ class Game {
         if (context.getCurrent().getName().equals("Water Reservoir") && askedQuestion == false) {
             if (!askedQuestion) {
                 // Prompt the player with a question and options in the Water Reservoir
-                System.out.println("Before you go, please answer this question:");
+                System.out.println("Please answer this question:");
                 System.out.println("How many people lack access to safe water?");
                 System.out.println("1. 3.1 billion");
                 System.out.println("2. 1.5 billion");

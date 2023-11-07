@@ -37,6 +37,8 @@ class Space extends Node {
     }
 
     //display information about verdensmål
+
+    
     if (name.contains("Northern")) {
       System.out.println("2.2 billion people lack access to clean water.");
     }
@@ -44,7 +46,15 @@ class Space extends Node {
     System.out.println("Current exits are:");
     for (String exit: exits) {
       System.out.println(" - "+exit);
+    
+      }
+    if (name.contains("Eastern")) {
+      System.out.println("3.5 billion people lack safely managed sanitation.");
     }
+    if (name.contains("Western")) {
+      System.out.println("By 2030 the united nations seek to achieve universal acces to safe and affordable drinking water.");
+    }
+
   }
   
   public void goodbye () {
