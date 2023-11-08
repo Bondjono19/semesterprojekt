@@ -6,23 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2248e123-b9d6-4fb2-91ac-3f39009bbe6a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/CommandBuy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/CommandClean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/CommandCollect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/CommandDrop.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/CommandExit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/CommandGo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/CommandHelp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/CommandPour.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/CommandStats.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/CommandUnknown.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/Context.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/Game.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/Registry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/Bucket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/semesterprojekt/Bucket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/Inventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/semesterprojekt/Inventory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/Shop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/semesterprojekt/Shop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/Space.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/semesterprojekt/World.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/woz/woz/CommandCollect.java" beforeDir="false" afterPath="$PROJECT_DIR$/woz/woz/CommandCollect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/woz/woz/Bucket.java" beforeDir="false" afterPath="$PROJECT_DIR$/woz/woz/Bucket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/woz/woz/CommandBuy.java" beforeDir="false" afterPath="$PROJECT_DIR$/woz/woz/CommandBuy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
