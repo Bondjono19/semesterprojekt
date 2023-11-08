@@ -24,7 +24,7 @@ public class CommandCollect extends BaseCommand implements Command {
                 if(current.drainWater(amount)==true){
                     inventory.getInventoryContents().get(i).fill(true);
                 }else{
-                    if(count<1){
+                    if(count==0){ //Ændring af count>1 til ==0 (betyder det samme)
                         System.out.println("No water here");
                     }
                     count++;
